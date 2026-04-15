@@ -4,16 +4,15 @@ export const legoParty: Project = {
   id: "lego-party",
   title: "Lego Party",
   year: "2024",
-  team: "SMG Studios (via Mighty Build and Test)",
+  team: "SMG Studios via Mighty Build and Test",
   role: "Automation Lead",
   category: "professional",
-  homeFeatured: true,
   image: "/images/lego-party/lego-party-splash.png",
   description: `
 Served as Test Automation Lead on Lego Party by SMG Studios, via Mighty Build and Test.
 Led automated test pipeline development across the project's development and release cycle.
   `,
-  tags: ["Test Automation", "CI/CD", "QA Tooling"],
+  tags: ["Test Automation", "Unity", "C#", "CI/CD", "QA Tooling"],
   links: [
     {
       label: "Steam",

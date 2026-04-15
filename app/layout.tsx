@@ -53,7 +53,7 @@ export default function RootLayout({
               className="fixed inset-x-0 top-0 h-screen pointer-events-none z-0 dark:hidden"
               style={{
                 background:
-                  "radial-gradient(ellipse 60% 50% at 30% -10%, rgba(99,102,241,0.10) 0%, transparent 80%), radial-gradient(ellipse 60% 50% at 70% -10%, rgba(245,158,11,0.10) 0%, transparent 80%)",
+                  "radial-gradient(ellipse 60% 50% at 30% -10%, rgba(40,214,241,0.10) 0%, transparent 80%), radial-gradient(ellipse 60% 50% at 70% -10%, rgba(245,158,11,0.10) 0%, transparent 80%)",
               }}
             />
             {/* Ambient glow — dark mode: indigo centre */}
@@ -61,7 +61,7 @@ export default function RootLayout({
               className="fixed inset-x-0 top-0 h-screen pointer-events-none z-0 hidden dark:block"
               style={{
                 background:
-                  "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99,102,241,0.20) 0%, transparent 85%)",
+                  "radial-gradient(ellipse 100% 68% at 50% -10%, rgba(70,150,250,0.20) 0%, transparent 85%)",
               }}
             />
             <SiteNav />

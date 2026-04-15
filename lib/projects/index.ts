@@ -8,6 +8,8 @@ export type { Project, ProjectSection, ProjectLink } from "./types";
 import { testbuddy } from "./testbuddy";
 import { legoParty } from "./lego-party";
 import { fitbitArcade } from "./fitbit-arcade";
+import { guiltyGear } from "./guilty-gear";
+import { dreamlight } from "./dreamlight";
 import { innchanted } from "./innchanted";
 import { forestDemo } from "./forest-demo";
 import { factoryDemo } from "./factory-demo";
@@ -22,6 +24,8 @@ export const projects = [
   // Professional
   testbuddy,
   legoParty,
+  dreamlight,
+  guiltyGear,
   fitbitArcade,
   innchanted,
   // Personal
@@ -36,10 +40,8 @@ export const projects = [
   lonelyAstronaut,
 ];
 
+export const featuredProjects = ["testbuddy", "lego-party", "dreamlight", "guilty-gear", "fitbit-arcade", "innchanted"];
+
 export function getProjectById(id: string) {
   return projects.find((p) => p.id === id);
-}
-
-export function getFeaturedProjects() {
-  return projects.filter((p) => p.homeFeatured);
 }

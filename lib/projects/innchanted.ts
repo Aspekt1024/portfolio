@@ -7,7 +7,6 @@ export const innchanted: Project = {
   team: "Dragonbear Studios",
   role: "Lead Programmer",
   category: "professional",
-  homeFeatured: true,
   image: "/images/innchanted/innchanted.png",
   description: `
 A co-op adventure where you brew magical potions, serve otherworldly guests, and fend off monsters. As Lead Programmer I oversaw the full codebase architecture and managed the programming team along with production.

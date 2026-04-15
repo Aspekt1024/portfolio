@@ -2,9 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { projects, type Project } from "@/lib/projects";
-
-const HOME_PROJECT_IDS = ["testbuddy", "lego-party", "fitbit-arcade", "innchanted"];
+import { projects, featuredProjects, type Project } from "@/lib/projects";
 
 function ProjectCard({ project }: { project: Project }) {
   return (
@@ -22,7 +20,7 @@ function ProjectCard({ project }: { project: Project }) {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${project.imagePosition === "top" ? "object-top" : "object-center"}`}
           />
         </div>
       ) : (
@@ -69,9 +67,10 @@ function ProjectCard({ project }: { project: Project }) {
 
         {/* Footer — z-20 so external links sit above the card overlay */}
         <div className="relative z-20 flex items-center justify-between pt-3 border-t border-zinc-100 dark:border-zinc-800">
-          <span className="text-xs text-indigo-500 dark:text-indigo-400 flex items-center gap-1 group-hover:gap-2 transition-all pointer-events-none">
+          <Link href={`/projects/${project.id}`} className="text-xs text-indigo-500 dark:text-indigo-400 flex items-center gap-1 group-hover:gap-2 transition-all">
             View project <ArrowRight size={12} />
-          </span>
+          </Link>
+
           {project.links && project.links.length > 0 && (
             <div className="flex items-center gap-3">
               {project.links.map((link) => (
@@ -104,7 +103,7 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 export default function HomeProjects() {
-  const featured = HOME_PROJECT_IDS
+  const featured = featuredProjects
     .map((id) => projects.find((p) => p.id === id))
     .filter((p): p is Project => p !== undefined);
 

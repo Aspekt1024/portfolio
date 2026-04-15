@@ -22,10 +22,10 @@ export type Project = {
   team?: string;
   role?: string;
   category: "professional" | "personal" | "jam";
-  homeFeatured?: boolean;
   description: string;
   tags: string[];
   image?: string;
+  imagePosition?: "top" | "center";
   video?: string;
   links?: ProjectLink[];
   fullDescription?: string;

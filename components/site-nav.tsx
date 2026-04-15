@@ -15,8 +15,8 @@ export function SiteNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="relative z-50 container-section border-b border-zinc-200 dark:border-zinc-800/60">
-      <div className="flex items-center justify-between px-6 md:px-10 py-5">
+    <nav className="sticky top-0 z-50 w-full border-b border-zinc-200 dark:border-zinc-800/60 bg-white/70 dark:bg-zinc-950/70 backdrop-blur-md">
+      <div className="container-section flex items-center justify-between py-5">
         <a href="/" className="text-indigo-500 dark:text-indigo-400 text-sm font-semibold tracking-wide">
           danscode.net
         </a>

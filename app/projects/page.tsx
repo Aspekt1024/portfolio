@@ -15,7 +15,7 @@ function ProjectCard({ project }: { project: Project }) {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+            className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${project.imagePosition === "top" ? "object-top" : "object-center"}`}
           />
         </div>
       ) : null}
@@ -50,9 +50,9 @@ function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
         <div className="relative z-20 flex items-center justify-between pt-3 border-t border-zinc-100 dark:border-zinc-800">
-          <span className="text-xs text-indigo-500 dark:text-indigo-400 flex items-center gap-1 group-hover:gap-2 transition-all pointer-events-none">
+          <Link href={`/projects/${project.id}`} className="text-xs text-indigo-500 dark:text-indigo-400 flex items-center gap-1 group-hover:gap-2 transition-all">
             View project <ArrowRight size={12} />
-          </span>
+          </Link>
           {project.links && project.links.length > 0 && (
             <div className="flex items-center gap-3">
               {project.links.map((link) => (

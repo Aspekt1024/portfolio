@@ -7,7 +7,6 @@ export const testbuddy: Project = {
   team: "Mighty Build and Test",
   role: "Technical Lead",
   category: "professional",
-  homeFeatured: true,
   image: "/images/mbt.png",
   description: `
 An enterprise QA platform built for games industry testers, featuring one-button bug creation, similar-bug detection, and third party integrations such as Jira and LQA tooling.
